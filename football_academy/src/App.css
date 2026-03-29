@@ -1,42 +1,453 @@
-#root {
-  max-width: 1280px;
+body{
+margin:0;
+font-family:Arial;
+background-color:  #f3f3f3;
+}
+
+/* HERO */
+
+.hero{
+height:120vh;
+background-size:cover;
+background-position:center;
+color:white;
+position:relative;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+}
+.footer-links a{
+  color:white;          /* normal color */
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.navbar ul{
+display:flex;
+gap:30px;
+list-style:none;
+color: #f3f3f3;
+}
+
+.logo{
+display:flex;
+align-items:center;
+  gap:10px;
+  wsidth:100px;
+}
+
+.logo img{
+width:80px;
+height:auto;
+padding-left: 0%;
+}
+
+.hero-text{
+position:absolute;
+top:20%;
+left:10%;
+}
+
+.hero-text h1{
+font-size:70px;
+}
+
+.hero-text span{
+color:#e4002b;
+}
+.hero-cut{
+position:absolute;
+bottom:0;
+width:100%;
+height:150px;
+background:#f3f3f3;
+
+clip-path: polygon(0 100%, 100% 0, 100% 100%, 0% 100%);
+}
+
+/* academy */
+
+.academy{
+display:flex;
+gap:40px;
+padding:80px;
+align-items:center;
+background:#f3f3f3;
+}
+
+.academy img{
+width:350px;
+}
+
+.academy-text h2{
+font-weight:bold;
+}
+
+/* motivation */
+
+.motivation{
+background:black;
+color:white;
+text-align:center;
+padding:60px;
+}
+
+.motivation span{
+color:red;
+}
+
+.motivation button{
+margin-top:20px;
+padding:12px 25px;
+background:none;
+border:none;
+color:white;
+border-bottom:2px solid red;
+cursor:pointer;
+}
+
+/* COACHES */
+
+.coaches{
+  width: 70%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 80px 0;
+}
+
+/* Each coach row */
+
+.coach{
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+/* Coach image */
+
+.coach img{
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* Text container */
+
+.coach div{
+  max-width: 500px;
+}
+
+/* Name */
+
+.coach h3{
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* Role */
+
+.coach span{
+  display: block;
+  color: #e4002b;
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
+
+/* Description */
+
+.coach p{
+  margin: 0;
+  line-height: 1.6;
+  color: #444;
+}
+/* PLAYER WEEK */
+.playerweek{
+  background:#e11d2e;
+  color:white;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:100px 120px;
+
+  /* bottom diagonal cut */
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+}
+
+/* text */
+
+.player-text h4{
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+.player-text h1{
+  font-size:65px;
+  margin:10px 0;
+}
+
+.player-text span{
+  font-weight:bold;
+}
+
+/* player image */
+
+.player-img img{
+  height:420px;
+}
+
+/* GALLERY */
+
+/* General Section Styling */
+.gallery-section {
+  background-color: #f3f3f3;
+  padding: 60px 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Red Vertical Accent and Title */
+.gallery-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.red-bar {
+  width: 6px;
+  height: 45px;
+  background-color: #b22222;
+}
+
+.gallery-title-wrapper h2 {
+  font-size: 42px;
+  font-weight: 900;
+  color: #555;
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: -1px;
+}
+
+/* The Overlapping Image Logic */
+.gallery-viewport {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 400px;
+}
+
+.side-img {
+  width: 50%;
+  height: 80%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.center-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 55%;
+  z-index: 2;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+  border: 4px solid white;
+}
+
+
+
+/* Text Content Columns */
+.text-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+}
+/* JOIN */
+
+.join-team{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:100vh;
+}
+
+
+
+.join-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:60px;
+}
+
+/* FORM CARD */
+
+.form-card{
+  width:40%;
+  background:white;
+  padding:40px;
+  border-radius:12px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  align-items: center;
+}
+
+.form-card h2{
+  font-size:32px;
+  margin-bottom:5px;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.subtitle{
+  color:#777;
+  margin-bottom:25px;
+  text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+/* INPUTS */
+
+.form-card input,
+.form-card textarea{
+  width:100%;
+  padding:14px;
+  margin-bottom:15px;
+  border:1px solid #ddd;
+  border-radius:8px;
+  font-size:15px;
+  transition:0.3s;
+}
+
+.form-card input:focus,
+.form-card textarea:focus{
+  border-color:#ffc107;
+  outline:none;
+  box-shadow:0 0 5px rgba(255,193,7,0.4);
+}
+
+.form-card textarea{
+  height:120px;
+  resize:none;
+}
+
+/* BUTTON */
+
+.form-card button{
+  width:100%;
+  padding:14px;
+  background:#ffc107;
+  border:none;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+  
+}
+
+.form-card button:hover{
+  background:#ffb300;
+  transform:translateY(-2px);
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .join-container{
+    flex-direction:column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .form-card,
+  .image-section{
+    width:100%;
   }
+
+}
+/* FOOTER */
+
+.footer{
+  background:#111;
+  color:white;
+  padding:40px 10%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.footer-container{
+  display:flex;
+  align-items:center;
 }
 
-.card {
-  padding: 2em;
+/* Left */
+.footer-left{
+  flex:1;
+  color:#ffb300;
 }
 
-.read-the-docs {
-  color: #888;
+/* Center */
+.footer-links a{
+  display:flex;
+  gap:40px;
+  justify-content:center;
+}
+
+/* Each link style */
+
+.footer-links a {
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+/* Hover only on that link */
+
+.footer-links a:hover{
+  color:#ffc107;
+}
+/* Right */
+.footer-social{
+  flex:1;
+  display:flex;
+  justify-content:flex-end;
+  gap:20px;
+}
+.footer-links li{
+  cursor:pointer;
+
+}
+
+/* RIGHT */
+
+.footer-social{
+  display:flex;
+  gap:20px;
+  font-size:20px;
+  cursor:pointer;
+}
+
+.footer-social svg:hover{
+  color:#ffc107;
+}
+
+/* COPYRIGHT */
+
+.copyright{
+  text-align:center;
+  margin-top:30px;
+  font-size:14px;
+  color:#aaa;
 }
